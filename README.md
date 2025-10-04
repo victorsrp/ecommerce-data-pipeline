@@ -36,28 +36,30 @@ ecommerce-data-pipeline/
 ```bash
 python -m venv venv
 source venv/Scripts/activate
+```  
 
-Instale as dependências:
+2. Instale as dependências:  
+```bash
 pip install -r requirements.txt
 ```  
 ---
 
 ## Dependências principais  
 
--pandas → manipulação de dados  
--boto3 → integração com AWS S3  
--faker → geração de dados fictícios para testes  
+- pandas → manipulação de dados  
+- boto3 → integração com AWS S3  
+- faker → geração de dados fictícios para testes  
 
 ---
 
 ## Controle de Versão  
 
 Este projeto segue Conventional Commits:  
--chore: → tarefas de manutenção e setup  
--feat: → novas funcionalidades  
--fix: → correção de bugs  
--docs: → alterações na documentação  
--refactor: → refatoração de código  
+- chore: → tarefas de manutenção e setup  
+- feat: → novas funcionalidades  
+- fix: → correção de bugs  
+- docs: → alterações na documentação  
+- refactor: → refatoração de código  
 
 ---
 
