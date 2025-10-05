@@ -3,8 +3,14 @@ from faker import Faker
 import pandas as pd
 import uuid
 from datetime import datetime
+from pathlib import Path
 
 fake = Faker('pt_BR')
+raw_path = Path("data/raw") #criando objeto path
+
+#garantindo pasta data/raw
+raw_path.mkdir(parents=True, exist_ok=True)
+
 
 def gen_rows(n=1000):
     rows = []
@@ -23,5 +29,6 @@ def gen_rows(n=1000):
 if __name__ == "__main__":
     df = gen_rows(5000)  # gera 5000 linhas
     filename = f"sales_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    df.to_csv(filename, index=False)
-    print("CSV gerado:", filename)
+    file_path = raw_path / filename #diretorio data/raw/filename.csv
+    df.to_csv(file_path, index=False)
+    print("CSV gerado:", file_path)
